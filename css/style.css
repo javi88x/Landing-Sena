@@ -1229,6 +1229,9 @@ footer{
 .res-uni{
 	color: #D35400;
 }
+.res-uni1{
+	color: #383f45;
+}
 .btn-tertiary{
 	background-color: #D35400 !important;
 	color: #fff !important;
@@ -1258,7 +1261,7 @@ label.info-contacto a{
   background-color: #27AE60;
   color: #fff;
   margin: 0;
-  padding: 34px;
+  padding: 15px;
   font-size: 2.4em;
   line-height: .9em;
   font-weight: 900;
@@ -1267,7 +1270,7 @@ label.info-contacto a{
 	background-color: #16A085;
  	color: #fff;
 	margin: 0;
-	padding: 20px;
+	padding: 29px;
 	font-size: 2.4em;
 	line-height: .9em;
 	font-weight: 900;
@@ -1311,6 +1314,7 @@ label.info-contacto a{
         width: 100% !important;
         height: 60% !important;
     }
+
 @media screen and(max-width: 716px){
 	.logo{
 		display: block !important;

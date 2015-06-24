@@ -1326,10 +1326,19 @@ label.info-contacto a{
 		text-align: center !important;
 	}
 }
-@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+
+/* Media Query iPhone 6 */
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px){
+	.heading{
+		font-size: 45px !important;
+	}
+	.info-u{
+		line-height:32px !important;
+	}
 	.logo{
 		display: block;
 		text-align: center;
+		margin: 0 0 10px 0 !important;
 	}
 	.contact-detail{
 		text-align: center;
@@ -1350,12 +1359,52 @@ label.info-contacto a{
 		font-size: 46px;
 	}
 	.plus{
-		display: none;
+		display: none !important;
 	}
-	.sena{
+	img.sena{
+		display: block !important;
+		margin: auto !important;
+		padding: 0 !important;
+	} 
+ }
+
+ /*Media Query other Phone */
+ @media only screen and (min-device-width : 360px) and (max-device-width : 640px){
+ 	.plus{
+		display: none !important;
+	}
+.heading{
+		font-size: 45px !important;
+	}
+	.info-u{
+		line-height:32px !important;
+	}
+	.logo{
 		display: block;
-		margin: auto;
-		padding-left: 0;
-		padding-bottom: 12px;
+		text-align: center;
+		margin: 0 0 10px 0 !important;
+	}
+	.contact-detail{
+		text-align: center;
+	}
+	.heading{
+		text-align: center;
+	}
+	h4{
+		font-size: 20px;
+		line-height: 23px;
+	}
+	.scrolltop h3{
+		font-size: 40px;
+		line-height: 50px;
+		text-align: center;
+	}
+	.heading{
+		font-size: 46px;
+	}
+	img.sena{
+		display: block !important;
+		margin: auto !important;
+		padding: 0 !important;
 	} 
  }

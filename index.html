@@ -78,10 +78,14 @@
 									<li>
 										<input class="form-control" type="text" name="nombre" data-rule="required" data-msg="Campo requerido" placeholder="Nombre completo" required />
 										<div class="validation"></div>
-									</li>	
+									</li>
+									<li>
+										<input class="form-control label-number" type="text" name="identificacion" data-rule="required" data-msg="Campo requerido" placeholder="Número de identificación" required />
+										<div class="validation"></div>
+									</li>		
 									<li>
 
-										<input class="form-control" type="text" name="telefono" placeholder="Teléfono" data-rule="required" data-msg="Campo requerido" required/>
+										<input class="form-control label-number" type="text" name="telefono" placeholder="Teléfono" data-rule="required" data-msg="Campo requerido" required/>
 										<div class="validation"></div>
 									</li>									
 									<li>
@@ -97,7 +101,7 @@
 										<div class="validation"></div>	
 									</li>
 									<li class="last">
-										<input type="submit" value="Inscribete" class="btn btn-tertiary" name="Submit" />
+										<input type="submit" value="Inscríbete" class="btn btn-tertiary" name="Submit" />
 									</li>
 								</ul>
 							</form>					
@@ -174,7 +178,7 @@
 							<!-- Acordeon 1 -->
 							<section id="accordion">
 										<div>
-											<p class="universitarios">Ciencia de la Información y Bibliotecología</p>
+											<p class="universitarios">Ciencias de la Información y Bibliotecología</p>
 											<input type="checkbox" id="check-1" />
 											<label for="check-1">Detalles del programa</label>
 											<article>
@@ -193,7 +197,7 @@
 					<div class="col-md-6">	
 							<section id="accordion">
 										<div>
-											<p class="tecnologicos">Ingenieria de Software</p>
+											<p class="tecnologicos">Ingeniería de Software</p>
 											<input type="checkbox" id="check-11" />
 											<label for="check-11">Detalles del programa</label>
 											<article>
@@ -276,7 +280,7 @@
 						              </div> </div> </div> </div> </div> </div> <div class="item"> <div class="row"> <div class="col-xs-12"> <div class="thumbnail adjust1"> <div class="col-md-2 col-sm-2 col-xs-12"> <img class="media-object img-rounded img-responsive" src="img/testimoni/testimonial3.png"> 
 						            </div> 
 						            <div class="col-md-10 col-sm-10 col-xs-12"> 
-						              <div class="caption"> <p class="text-info lead adjust2">Fue facíl inscribirme.</p> 
+						              <div class="caption"> <p class="text-info lead adjust2">Fue fácil inscribirme.</p> 
 						                <p><span class="glyphicon glyphicon-thumbs-up"></span> Me siento muy enamorada de esta prestigiosa Universidad ya que en ella he podido encontrar la carrera que siempre he querido estudiar, no solo me fascina su campus sino también los docentes que estarán dictado las clases, son personas muy capacitadas y con una gran experiencia.</p> 
 						                <blockquote class="adjust2"> <p>Hannia Vélez</p>
 						                </blockquote> 
@@ -307,7 +311,7 @@
 						<h4>
 						Escoge tu carrera y empieza a construir un futuro brillante.
 						</h4>
-							<a href="#home" class="btn-inscripcion">Inscríbete Ya !!</a>
+							<a href="#home" class="btn-inscripcion">¡Inscríbete Ya!</a>
 					</div>
 				</div>	
 			</div>
@@ -451,7 +455,12 @@
 	  ga('create', 'UA-26433603-2', 'auto');
 	  ga('send', 'pageview');
 	</script>
-
-
+    <script>
+        $(document).ready(function (){
+          $('.label-number').keyup(function (){
+            this.value = (this.value + '').replace(/[^0-9]/g, '');
+          });
+        });
+    </script>
   </body>
 </html>

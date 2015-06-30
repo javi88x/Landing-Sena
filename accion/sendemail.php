@@ -23,7 +23,7 @@ $mail->SMTPAuth = true;                               // Enable SMTP authenticat
 $mail->Username = 'envios@uninpahu.edu.co';                 // SMTP username
 $mail->Password = 'Gaco5970';                           // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 587;                                    // TCP port to connect to
+$mail->Port = 465;                                    // TCP port to connect to
 
 $mail->From = 'envios@uninpahu.edu.co';
 $mail->FromName = 'UNINPAHU Degris';

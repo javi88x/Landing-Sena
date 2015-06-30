@@ -10,7 +10,7 @@ if(!isset($_POST['nombre']) ||
 	!isset($_POST['identificacion']) ||
 	!isset($_POST['telefono']) ||
 	!isset($_POST['email']) ||
-	!isset($_POST['carreras'])){
+	!isset($_POST['programas'])){
 
 	echo "<b>Ocurrió un error y el formulario no ha sido enviado. </b><br />";
 	echo "Por favor, vuelva atrás y verifique la información ingresada<br />";
@@ -41,7 +41,7 @@ $mail->Body    .= "<b>Nombre:</b> " . $_POST['nombre'] . "\n";
 $mail->Body    .= "<b>Número de identificación:</b> " . $_POST['identificacion'] . "\n";
 $mail->Body    .= "<b>E-mail:</b> " . $_POST['email'] . "\n";
 $mail->Body    .= "<b>Teléfono:</b> " . $_POST['telefono'] . "\n";
-$mail->Body    .= "<b>Carrera de interes:</b> " . $_POST['carreras'] . "\n\n";
+$mail->Body    .= "<b>Carrera de interes:</b> " . $_POST['programas'] . "\n\n";
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {

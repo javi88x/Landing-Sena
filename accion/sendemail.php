@@ -3,7 +3,7 @@ require 'PHPMailerAutoload.php';
 
 $mail = new PHPMailer;
 
-//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+//$mail->SMTPDebug = 4;                               // Enable verbose debug output
 
 // Aquí se deberían validar los datos ingresados por el usuario
 if(!isset($_POST['nombre']) ||
@@ -30,17 +30,16 @@ $mail->FromName = 'UNINPAHU Degris';
 $mail->addAddress('handres@degrisdigital.com', 'Andres Degris');     // Add a recipient
 $mail->addAddress('com@uninpahu.edu.co');               // Name is optional
 
-
 $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
 $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Informacion Landing Convenio SENA - UNINPAHU';
+$mail->Subject = 'Informacion Landing Page SENA - UNINPAHU';
 $mail->Body    .= "<b>Nombre:</b> " . $_POST['nombre'] . "\n";
-$mail->Body    .= "<b>Número de identificación:</b> " . $_POST['identificacion'] . "\n";
+$mail->Body    .= "<b>Identificación:</b> " . $_POST['identificacion'] . "\n";
 $mail->Body    .= "<b>E-mail:</b> " . $_POST['email'] . "\n";
 $mail->Body    .= "<b>Teléfono:</b> " . $_POST['telefono'] . "\n";
-$mail->Body    .= "<b>Carrera de interes:</b> " . $_POST['programas'] . "\n\n";
+$mail->Body    .= "<b>Carrera de interes:</b> " . $_POST['carreras'] . "\n\n";
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {

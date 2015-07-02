@@ -39,7 +39,7 @@ $mail->Body    .= "<b>Nombre:</b> " . $_POST['nombre'] . "\n";
 $mail->Body    .= "<b>Identificación:</b> " . $_POST['identificacion'] . "\n";
 $mail->Body    .= "<b>E-mail:</b> " . $_POST['email'] . "\n";
 $mail->Body    .= "<b>Teléfono:</b> " . $_POST['telefono'] . "\n";
-$mail->Body    .= "<b>Carrera de interes:</b> " . $_POST['carreras'] . "\n\n";
+$mail->Body    .= "<b>Carrera de interes:</b> " . $_POST['programas'] . "\n\n";
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {
